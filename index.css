@@ -1,13 +1,71 @@
+/*PAGE 1*/
+
+/*Styling for Heading 1*/
 h1{
+    color: #E8BB7B;
     font-size: 100px;
+    font-family: Papyrus, fantasy;
     text-align: center;
 }
 
+/*Styling for EcoEats Heading*/
+span{
+    font-size: 100px;
+    font-family: Papyrus, fantasy;
+    text-align: center;
+}
+
+/*Styling for Paragraph Elements*/
 p{
+    color: #E8BB7B;
+    font-family: Papyrus, fantasy; 
     text-align: center;
 }
 
-h2 {
+
+/*Styling for Nav Bar*/ 
+ul {
+    list-style-type: none;
+    margin: 100;
+    padding: 0;
+    overflow: hidden;
+    background-color: #89BF3A;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    font-family: Papyrus, fantasy;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #D6CCC2;
+}
+
+.active {
+    background-color: #F5EBE0;
+}
+
+
+/*PAGE 2*/
+
+/*Styling for Heading 2*/
+h2{
+    color: #E8BB7B;
     font-size: 50px;
+    font-family: Papyrus, fantasy;
     text-align: center;
 }
+
+/*Styling for Products*/
+
+
+
+/*PAGE 3*/
