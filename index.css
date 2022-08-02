@@ -15,6 +15,12 @@ span{
     text-align: center;
 }
 
+.Eco {
+    font-size: 100px;
+    font-family: Papyrus, fantasy;
+    text-align: center;
+}
+
 /*Styling for Paragraph Elements*/
 p{
     color: #E8BB7B;
