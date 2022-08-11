@@ -52,11 +52,11 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #D6CCC2;
+    background-color: #E8BB7B ;
 }
 
 .active {
-    background-color: #F5EBE0;
+    background-color: #E8BB7B ;
 }
 
 
@@ -72,6 +72,45 @@ h2{
 
 /*Styling for Products*/
 
+
+
+/* Placement for "Comment Section" boxes */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    }
+    
+    /* Colour of Labels in Comment Section */
+    label {
+      color: ghostwhite;
+    }
+    
+    /* Colour and font of Components in Comment Section */
+    h4 {
+        font-family: Papyrus, fantasy;
+        text-align: center;
+    }
+    
+    /* Placement of Respond Box */
+    #respond {
+      margin-top: 40px;
+      margin-left: 60px;
+    }
+    
+    /* Input into Comment Section and Placements */
+    #respond input[type='text'],
+    #respond input[type='email'],
+    #respond textarea {
+      margin-bottom: 20px;
+      display: block;
+      width: 40%;
+    
+    /* Size of comment input boxes */
+      border: 10px solid rgb(255, 255, 255);
+      line-height: 1.4em;
+    }
 
 
 /*PAGE 3*/

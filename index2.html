@@ -19,7 +19,7 @@
         <a href="index3.html"></a>
 
     </head>
-    <body style="background-color:#E3D5CA;">
+    <body style="background-color: #49260C ;">
 
         <!--Nav Bar-->
         <ul>
@@ -37,8 +37,23 @@
                     <h2>Spoon</h2>
                     <p>*add price</p>   
                 </div>
-            </div>
-            
+        
+        <!--Making a comment section-->
+        <div id="respond"> 
+            <h2>Comments/Suggestions</h2>  
+            <form name="myForm" action="index2.html", method="post" id="commentform">
+            <h4><label for="comment_author" class="required">Your name</label></h4>
+            <input type="text" name="comment_author" id="comment_author" value="" tabindex="1"
+            required="required">
+            <h4><label for="comment" class="required">Your comment</label></h4>
+            <textarea name="comment" id="comment" rows="10" tabindex="4" required="required"></textarea>
+            <!-- Submit comment button -->
+            <button onclick="return validateForm()">Submit</button>
+            <!--<input type="submit" value="Submit">-->
+
+        <br> <br> <br> <br>
+
+    </form>
         </div>
         
         <script src="index.js" async defer></script>
