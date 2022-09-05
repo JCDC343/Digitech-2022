@@ -38,6 +38,22 @@ p{
     width: 1300px;
   }
 
+.bottom {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 140px;
+    width: 400px;
+}
+
+.square {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:n 800px;
+    width: 800px;
+}
+
 /*Styling for Nav Bar*/ 
 ul {
     list-style-type: none;
