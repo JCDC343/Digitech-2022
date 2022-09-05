@@ -1,5 +1,3 @@
-
-
 //Validating submit button for comment section
 function validateForm() {
   let x = document.forms["myForm"]["comment_author"].value;
