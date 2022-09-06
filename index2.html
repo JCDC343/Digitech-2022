@@ -19,6 +19,7 @@
         <a href="index3.html"></a>
 
     </head>
+
     <body style="background-color: #49260C ;">
 
         <!--Nav Bar-->
@@ -49,12 +50,16 @@
         <div id="respond"> 
             <!--<h2>Comments/Suggestions</h2>-->
             <h1>Comments</h1>  
+            <h4><label for="comment_author" class="required">ID</label></h4>
+            <input type="text" name="comment_author" id="comment_author" value="" tabindex="1"
+            required="required" class="center">
             <form name="myForm" action="index2.html", method="post" id="commentform">
             <h4><label for="comment_author" class="required">Your name</label></h4>
             <input type="text" name="comment_author" id="comment_author" value="" tabindex="1"
             required="required" class="center">
             <h4><label for="comment" class="required">Your comment</label></h4>
             <textarea name="comment" id="comment" rows="10" tabindex="4" required="required" class="center"></textarea>
+            <div><button>INSERT</button> <button>UPDATE</button> <button>REMOVE</button></div>
             <!-- Submit comment button -->
             <button class="button" onclick="return validateForm()">Submit</button>
             <!--<input type="submit" value="Submit">-->
@@ -64,6 +69,136 @@
     </form>
         </div>
         
+    <!--Comment Section Database-->    
+        <div id="enterDetails">
+            <h1>Enter details</h1>
+    
+            <h4>ID</h4> 
+            <input id="enterID" type="text"> 
+    
+            <h4>Name</h4> 
+            <input id="enterName" type="text"> 
+    
+            <h4>Age</h4> 
+            <input id="enterAge" type="number"> <br><br>
+    
+            <button id="insert">INSERT</button>
+            <button id="update">UPDATE</button>
+            <button id="remove">REMOVE</button> <br><br>
+        </div>
+    
+        <div id="findDetails">
+            <h1>Find by ID</h1>
+            <h4>ID</h4>
+            <input id="findID" type="text"> <br><br>
+            <button id="find">FIND</button>
+            <h3 id="findName" type="text"></h3>
+            <h3 id="findAge" type="number"></h3> <br><br>
+        </div>
+        
+    
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyDQnoYcFQIxX0lhhxY3ELZXp4iGxwXYQvo",
+              authDomain: "EcoEats-a9de5.firebaseapp.com",
+              databaseURL: "https://test-a9de5-default-rtdb.asia-southeast1.firebasedatabase.app",
+              projectId: "EcoEats-a9de5",
+              storageBucket: "EcoEats-a9de5.appspot.com",
+              messagingSenderId: "416282264979",
+              appId: "1:416282264979:web:2da0f8059dc4dba17a9466"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+    
+    
+            import {getDatabase, ref, get, set, child, update, remove}
+            from "https://www.gstatic.com/firebasejs/9.9.4/firebase-database.js"
+            
+    
+            const db = getDatabase();
+    
+            var enterID = document.querySelector("#enterID");
+            var enterName = document.querySelector("#enterName");
+            var enterAge = document.querySelector("#enterAge");
+            var findID = document.querySelector("#findID");
+            var findName = document.querySelector("#findName");
+            var findAge = document.querySelector("#findAge");
+          
+    
+            var insertBtn = document.querySelector("#insert");
+            var updateBtn = document.querySelector("#update");
+            var removeBtn = document.querySelector("#remove");
+            var findBtn = document.querySelector("#find");
+    
+            function InsertData() {
+                set(ref(db, "People/"+ enterID.value),{
+                    Name: enterName.value,
+                    ID: enterID.value,
+                    Age: enterAge.value
+                })
+                .then(()=>{
+                    alert("Data added successfully");
+                })
+                .catch((error)=>{
+                    alert(error);
+                });
+            }
+    
+            function FindData() {
+                const dbref = ref(db);
+    
+                get(child(dbref, "People/" + findID.value))
+                .then((snapshot)=>{
+                    if(snapshot.exists()){
+                        findName.innerHTML = "Name: " + snapshot.val().Name;
+                        findAge.innerHTML = "Age: " + snapshot.val().Age;
+                    } else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error)=>{
+                    alert(error)
+                })
+                
+            }
+    
+            function UpdateData(){
+                update(ref(db, "People/"+ enterID.value),{
+                    Name: enterName.value,
+                    Age: enterAge.value
+                })
+                .then(()=>{
+                    alert("Data updated successfully");
+                })
+                .catch((error)=>{
+                    alert(error);
+                });
+            }
+    
+            function RemoveData(){
+                remove(ref(db, "People/"+ enterID.value))
+                .then(()=>{
+                    alert("Data deleted successfully");
+                })
+                .catch((error)=>{
+                    alert(error);
+                });
+            }
+    
+            insertBtn.addEventListener('click', InsertData);
+            updateBtn.addEventListener('click', UpdateData);
+            removeBtn.addEventListener('click', RemoveData);
+            findBtn.addEventListener('click', FindData);
+    
+          </script>
+
         <script src="index.js" async defer></script>
     </body>
 </html>
