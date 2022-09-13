@@ -34,8 +34,8 @@ p{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 550px;
-    width: 1300px;
+    height: 400px;
+    width: 1000px;
   }
 
 .bottom {
@@ -85,6 +85,12 @@ li a:hover:not(.active) {
     background-color: #E8BB7B ;
 }
 
+.bottom {
+    display: block;
+    padding: px;
+    background-color: #dddddd;
+}
+
 
 /*PAGE 2*/
 
@@ -97,12 +103,34 @@ h2{
 }
 
 /*Styling for Products*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  no
+
 .small-container{
     max-width: 1080px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+    display: flex;
+  flex-direction: row;
 }
+
 
 .col-4{
     flex-basis: 25%;
@@ -113,7 +141,6 @@ h2{
 
 .col-4 img{
     width: 30%;
-    float: left;
 }
 
 /* Placement for "Comment Section" boxes */
