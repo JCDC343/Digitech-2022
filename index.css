@@ -120,28 +120,11 @@ h2{
     clear: both;
     display: table;
   }
-  no
 
-.small-container{
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-    display: flex;
-  flex-direction: row;
-}
-
-
-.col-4{
-    flex-basis: 25%;
-    padding: 10px;
-    min-width: 200px;
-    margin-bottom: 50px;
-}
-
-.col-4 img{
-    width: 30%;
-}
+  /*Star ratings*/
+  .rating{
+    color: #89BF3A;
+  }
 
 /* Placement for "Comment Section" boxes */
 .center {
@@ -163,10 +146,6 @@ h2{
     }
     
     /* Placement of Respond Box */
-    #respond {
-      margin-top: 40px;
-      margin-left: 60px;
-    }
     
     /* Input into Comment Section and Placements */
     #respond input[type='text'],
