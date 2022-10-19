@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,6 @@
                 box-shadow: white 20px 20x 20px 20px;
             }
         </style>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -31,7 +31,17 @@
           </ul>
     
         <!--Featured Products-->
-        <h1>Products</h1>
+        <br>
+        <h1>Products</h1> 
+        <br>
+
+        <!--Description-->
+        <p>Here are EcoEats featured products,</p>
+        <p>EcoEats have a variety of different packs to choose from, 3 packs and 4 packs galore!</p>
+        <p>Pick your flavour, Original, Basil, Cinnamon, Cocoa</p3>
+        <p>Enjoy your pack of edible cutlery, "eat your share and do your part" with us, Ecoeats!</p>
+
+<br><br><br><br>
 
         <!--OG Flavour-->
         <div class="row">
@@ -42,7 +52,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
                     <p>$2.00</p>   
@@ -54,7 +64,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
                     <p>$2.00</p>   
@@ -65,8 +75,8 @@
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
                     <p>$2.50</p>   
@@ -89,7 +99,7 @@
                 </div>
             <div class="column">
               <img src="3_Basil_Sporks.jpg" alt="3_Basil_Sporks" style="width:100%">
-              <p>3 Basil Spoons Pack</p>
+              <p>3 Basil Sporks Pack</p>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -107,7 +117,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star"></i>
                     </div>
                     <p>$2.50</p>   
                 </div>
@@ -123,7 +133,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star"></i>
                     </div>
                     <p>$2.00</p>   
                 </div>
@@ -135,7 +145,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star"></i>
                     </div>
                     <p>$2.00</p>   
                 </div>
@@ -146,7 +156,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
                     <p>$2.50</p>   
@@ -163,7 +173,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star"></i>
                     </div>
                     <p>$2.00</p> 
                 </div>
@@ -175,7 +185,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star"></i>
                     </div>
                     <p>$2.00</p>  
                 </div>
@@ -187,7 +197,7 @@
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
-                      <i class="fa fa-star-o"></i>
+                      <i class="fa fa-star"></i>
                   </div>
                   <p>$2.50</p>   
                 </div>
@@ -196,7 +206,7 @@
         <br> <br>
 
         <!--Making a comment section-->
-        <div id="enterComments"> 
+        <div id="enterComments">
             <h1>Comments</h1>  
             <h4><label>ID</label></h4>
             <input type="text" id="enterID" tabindex="1" required="required" class="center">
@@ -204,11 +214,16 @@
             <input type="text" id="enterName" tabindex="1" required="required" class="center">
             <h4><label>Your comment</label></h4>
             <textarea id="enterComment" rows="10" tabindex="4" required="required" class="center"></textarea>
-            <div><button id="insert">INSERT</button> <button id="update">UPDATE</button> <button id="remove">REMOVE</button></div>
-            <div> <div id="findDetails">
+            <div><button id="insert">INSERT</button> <button id="update">UPDATE</button> <button id="remove">REMOVE</button>
+            <button onclick="testFunc()">TestFunc</button>
+
+            <br> <br> <br> <br>
+            
+            </form> 
+            <div class="center"> <div id="findDetails">
                 <h1>Find by ID</h1>
                 <h4>ID</h4>
-                <input id="findID" type="text"> <br><br>
+                <input id="findID" type="text"> <br><br> 
                 <button id="find">FIND</button>
                 <h3 id="findName" type="text"></h3>
                 <h3 id="findComment" type="text"></h3> <br><br>
@@ -217,13 +232,107 @@
         <br> <br> <br> <br>
         <br> <br> <br> <br>
 
-        <div>
-            <h4 class="header">Comments</h4>
-            <div id="comments"></div>
-   
-        </div>
+        
+        <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+                
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyDQnoYcFQIxX0lhhxY3ELZXp4iGxwXYQvo",
+        authDomain: "EcoEats-a9de5.firebaseapp.com",
+        databaseURL: "https://test-a9de5-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "EcoEats-a9de5",
+        storageBucket: "EcoEats-a9de5.appspot.com",
+        messagingSenderId: "416282264979",
+        appId: "1:416282264979:web:2da0f8059dc4dba17a9466"
+        };
+                
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
 
+        import {getDatabase, ref, get, set, child, update, remove}
+        from "https://www.gstatic.com/firebasejs/9.9.4/firebase-database.js"
 
+        const db = getDatabase();
+
+        var enterID = document.querySelector("#enterID");
+        var enterName = document.querySelector("#enterName");
+        var enterComment = document.querySelector("#enterComment");
+        var findID = document.querySelector("#findID");
+        var findName = document.querySelector("#findName");
+        var findComment = document.querySelector("#findComment");
+
+        var insertBtn = document.querySelector("#insert");
+        var updateBtn = document.querySelector("#update");
+        var removeBtn = document.querySelector("#remove");
+        var findBtn = document.querySelector("#find");
+      
+        insertBtn.addEventListener('click', InsertData);
+        updateBtn.addEventListener('click', UpdateData);
+        removeBtn.addEventListener('click', RemoveData);
+        findBtn.addEventListener('click', FindData);
+        
+        function InsertData() {
+            set(ref(db, "Comments/"+ enterID.value),{
+                Name: enterName.value,
+                ID: enterID.value,
+                Comment: enterComment.value
+            })
+            .then(()=>{
+                //alert("Data added successfully");
+                InsertDataAlert();
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+
+        function FindData() {
+            const dbref = ref(db);
+
+            get(child(dbref, "Comments/" + findID.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName.innerHTML = "Name: " + snapshot.val().Name;
+                    findComment.innerHTML = "Comment: " + snapshot.val().Comment;
+                } else {
+                    FindDataAlert();
+                }
+            })
+            .catch((error)=>{
+                alert(error);
+            })
+            
+        }
+
+        function UpdateData(){
+            update(ref(db, "Comments/"+ enterID.value),{
+                Name: enterName.value,
+                Comment: enterComment.value
+            })
+            .then(()=>{
+                UpdateDataAlert();
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+
+        function RemoveData(){
+            remove(ref(db, "Comments/"+ enterID.value))
+            .then(()=>{
+                RemoveDataAlert();
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+        </script> 
+        <script src="index.js"></script>
+        
 <!--Making a comment section
 <div id="enterComments"> 
     <h1>Comments</h1>  
@@ -237,9 +346,9 @@
     <h4><label for="comment" class="required">Your comment</label></h4>
     <textarea name="comment" id="enterComment" rows="10" tabindex="4" required="required" class="center"></textarea>
     <div><button id="insert">INSERT</button> <button id="update">UPDATE</button> <button id="remove">REMOVE</button></div>
-    <!-- Submit comment button -->
+    Submit comment button -->
     <!--<button class="button" onclick="return validateForm()">Submit</button>
-    <!--<input type="submit" value="Submit">-->
+    <input type="submit" value="Submit">-->
 <!--</form>-->
 
 <!--Comment Section Database 
@@ -269,7 +378,6 @@
     <h3 id="findAge" type="number"></h3> <br><br>
 </div>-->   
 
-
-        <script src="index.js" async defer></script>
+       
     </body>
 </html>

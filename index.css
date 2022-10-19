@@ -131,7 +131,7 @@ h2{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 40%;
     }
     
     /* Colour of Labels in Comment Section */
@@ -153,10 +153,10 @@ h2{
     #respond textarea {
       margin-bottom: 20px;
       display: block;
-      width: 40%;
+      width: 20%;
     
     /* Size of comment input boxes */
-      border: 10px solid rgb(255, 255, 255);
+      border: 10px solid rgb(200, 200, 200);
       line-height: 1.4em;
     }
 
@@ -181,4 +181,6 @@ body {text-align: center;}
         #findDetails {float: left; width: 50%; background-color: floralwhite; color: lightpink;}
         input {width: 120px;}
 
-/*PAGE 3*/
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,600)
+
+       

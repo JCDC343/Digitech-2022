@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="TEST.css">
+    </head>
+    <body>
+            <div class="container">
+              <div class="comment-box">
+                <div class="comment-form">
+                  <div class="header">Add Your Comment</div>
+                  <form action="#" onsubmit="event.preventDefault(); postComment()">
+                    <div> 
+                      <input type="text" id="name" placeholder="Name"/>
+                    </div>
+                    <div>
+                      <textarea id="comment" rows="3" cols="30" placeholder="Comment"></textarea>
+                    </div>
+                    <button type="submit">COMMENT</button>
+                  </form>  
+                </div>
+                <div>
+                  <h4 class="header">Comments</h4>
+                  <div id="comments"></div>
+                </div>
+                <div class="footer"><hr><p>&copy 2016 by Josh Bivens</p></div>
+              </div>
+            </div>
+        
+        <script src="TEST.js" async defer></script>
+    </body>
+</html>
