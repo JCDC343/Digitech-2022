@@ -133,6 +133,13 @@ h2{
     margin-right: auto;
     width: 40%;
     }
+
+/* Placement for "Find by ID" box */
+.centerID {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    }
     
     /* Colour of Labels in Comment Section */
     label {
@@ -160,8 +167,6 @@ h2{
       line-height: 1.4em;
     }
 
-    /*Find by ID Placement*/
-
     /* Button Styling */
 .button {
     display: block;
@@ -176,10 +181,23 @@ h2{
     border-radius: 10px;
 }
 
+.Findbutton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+    font-family: Papyrus, fantasy;
+    width: 20%;
+    background-color: #89BF3A;
+    color: #49260C;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 /* Styling for comment section database*/
 body {text-align: center;}
         #enterDetails {float: left; width: 50%;  background-color: lightpink; color: floralwhite;}
-        #findDetails {float: left; width: 50%; background-color: floralwhite; color: lightpink;}
+        #findDetails {width: 100%; background-color: floralwhite; color: #49260C;}
         input {width: 120px;}
 
         @import url(https://fonts.googleapis.com/css?family=Roboto:400,600)

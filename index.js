@@ -1,3 +1,4 @@
+//Alert Functions
 function testFunc(){
      alert("Test JavaScript");
 }
@@ -15,6 +16,8 @@ function UpdateDataAlert() {
 
 function RemoveDataAlert() {
     alert("Data removed successfully");
-}
+} 
+
+//var alert = ["Data added successfully", "Data updated successfully", "Data removed successfully", "No data found"];
 
 
