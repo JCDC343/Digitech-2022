@@ -142,9 +142,9 @@ h2{
     /* Colour and font of Components in Comment Section */
     h4 {
         font-family: Papyrus, fantasy;
-        text-align: center;
+        color: #E8BB7B;
     }
-    
+
     /* Placement of Respond Box */
     
     /* Input into Comment Section and Placements */
@@ -160,19 +160,20 @@ h2{
       line-height: 1.4em;
     }
 
+    /*Find by ID Placement*/
+
     /* Button Styling */
 .button {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    display: inline;
     font-family: Papyrus, fantasy;
-    width: 5%;
+    width: 10%;
     background-color: #89BF3A;
     color: #49260C;
-  padding: 10px;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* Styling for comment section database*/

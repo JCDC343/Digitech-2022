@@ -205,7 +205,7 @@
 
         <br> <br>
 
-        <!--Making a comment section-->
+        <!--Comment Section-->
         <div id="enterComments">
             <h1>Comments</h1>  
             <h4><label>ID</label></h4>
@@ -214,13 +214,18 @@
             <input type="text" id="enterName" tabindex="1" required="required" class="center">
             <h4><label>Your comment</label></h4>
             <textarea id="enterComment" rows="10" tabindex="4" required="required" class="center"></textarea>
-            <div><button id="insert">INSERT</button> <button id="update">UPDATE</button> <button id="remove">REMOVE</button>
-            <button onclick="testFunc()">TestFunc</button>
+            <br>
+            <div>
+            <button id="insert" class="button">INSERT</button> 
+            <button id="update" class="button">UPDATE</button> 
+            <button id="remove" class="button">REMOVE</button>
+            <!--<button class="button" onclick="displaycomments()">TestFunc</button> -->
 
             <br> <br> <br> <br>
             
+        <!--Find by ID-->    
             </form> 
-            <div class="center"> <div id="findDetails">
+            <div> <div id="findDetails">
                 <h1>Find by ID</h1>
                 <h4>ID</h4>
                 <input id="findID" type="text"> <br><br> 
@@ -229,6 +234,13 @@
                 <h3 id="findComment" type="text"></h3> <br><br>
             </div>
         </div>
+
+          <div> <div id="findDetails">
+            <h1>Comments</h1>
+            <h3 id="commentslist" type="text"></h3>
+
+        </div>
+    </div>
         <br> <br> <br> <br>
         <br> <br> <br> <br>
 
@@ -258,6 +270,7 @@
 
         const db = getDatabase();
 
+        // Variables
         var enterID = document.querySelector("#enterID");
         var enterName = document.querySelector("#enterName");
         var enterComment = document.querySelector("#enterComment");
@@ -275,23 +288,31 @@
         removeBtn.addEventListener('click', RemoveData);
         findBtn.addEventListener('click', FindData);
         
+        // Functions for buttons when pressed
         function InsertData() {
-            set(ref(db, "Comments/"+ enterID.value),{
-                Name: enterName.value,
-                ID: enterID.value,
-                Comment: enterComment.value
-            })
-            .then(()=>{
-                //alert("Data added successfully");
-                InsertDataAlert();
-            })
-            .catch((error)=>{
-                alert(error);
-            });
+            if (enterID.value != "") {
+                set(ref(db, "Comments/"+ enterID.value),{
+                    Name: enterName.value,
+                    ID: enterID.value,
+                    Comment: enterComment.value
+                })
+                .then(()=>{
+                    //alert("Data added successfully");
+                    InsertDataAlert();
+                })
+                .catch((error)=>{
+                    alert(error);
+                });
+            }
+
+            document.getElementById("enterID").value = '';
+            document.getElementById("enterName").value = '';
+            document.getElementById("enterComment").value = '';
         }
 
         function FindData() {
             const dbref = ref(db);
+            //var ref = dbref.ref("Comments/") 
 
             get(child(dbref, "Comments/" + findID.value))
             .then((snapshot)=>{
@@ -300,6 +321,15 @@
                     findComment.innerHTML = "Comment: " + snapshot.val().Comment;
                 } else {
                     FindDataAlert();
+                    /*dbref.on('child_added', function(snapshot) {
+                        snapshot.forEach(function(IDSnapshot) {
+                            var ID = IDSnapshot.val();
+                            console.log('ID', ID);
+                        })
+                    });*/
+                    document.getElementById("findID").value = '';
+                    findName.innerHTML = "";
+                    findComment.innerHTML = "";
                 }
             })
             .catch((error)=>{
@@ -330,6 +360,18 @@
                 alert(error);
             });
         }
+        
+     
+        /*ref.on("child_added", function(snapshot) {
+        var comment = snapshot.val();
+        addComment(comment.ID, comment.Name, comment.Comment);
+        });
+     
+        function addComment(id, name, comment) {
+        var comments = document.getElementById("commentslist");
+        comments.innerHTML = "<hr><h4>" + name + " says<span>" + id + "</span></h4><p>" + comment + "</p>" + comments.innerHTML;
+        }*/
+
         </script> 
         <script src="index.js"></script>
         
